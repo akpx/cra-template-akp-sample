@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "license": "MIT",
   "author": "Abhishek Pathak <akpathak.npm@gmail.com",
-  "private": true,
   "engines": {
     "node": ">=10"
   },
