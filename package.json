@@ -1,7 +1,12 @@
 {
-  "name": "cap-dcx-react-seed",
+  "name": "cra-template-akp-sample",
   "version": "0.1.0",
+  "license": "MIT",
+  "author": "Abhishek Pathak <akpathak.npm@gmail.com",
   "private": true,
+  "engines": {
+    "node": ">=10"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -15,7 +20,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean-files": "rm -rf ./template/public ./template/src && rm -f ./template/.eslintrc",
+    "copy-files": "cp -a ./src/. template/src && cp -a ./public/. template/public && cp .eslintrc template/",
+    "prepublishOnly": "yarn clean-files && yarn copy-files"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +42,25 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "files": [
+    "template",
+    "template.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akpx/cra-template-akp-sample.git",
+    "directory": "/"
+  },
+  "bugs": {
+    "url": "https://github.com/akpx/cra-template-akp-sample/issues"
+  },
+  "main": "template.json",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "cra-template",
+    "template",
+    "prettier"
+  ]
 }
